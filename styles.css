@@ -531,3 +531,29 @@ h1{
   .nav__menu.isOpen{ display:flex; }
   .controls{ width:100%; justify-content: space-between; }
 }
+.toast{
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 13px;
+  min-height: 18px;
+}
+
+.contact{
+  display:grid;
+  grid-template-columns: 1.4fr .6fr;
+  gap: 14px;
+  align-items:start;
+}
+.contact__row{
+  display:flex;
+  gap: 10px;
+  flex-wrap:wrap;
+  margin: 12px 0 0;
+}
+.panel{
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.05);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
