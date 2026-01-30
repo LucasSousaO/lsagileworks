@@ -107,7 +107,7 @@ a:hover{ text-decoration: underline; text-underline-offset: 4px; }
   background: var(--text);
   opacity: .9;
 }
-.brand__text{ font-size: 14px; }
+.brand__text{ font-size: 14px; color:var(--accent); }
 
 .nav{
   display:flex;
@@ -398,7 +398,7 @@ h1{
    SECTIONS
    ========================= */
 .section{
-  padding: 38px 0;
+  padding: 20px 0;
 }
 .sectionHead{
   margin-bottom: 14px;
