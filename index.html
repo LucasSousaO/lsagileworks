@@ -4,15 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>LS AgileWorks | Technical Project Management & Delivery</title>
+  <title>LS AgileWorks | Technical Project Management</title>
   <meta name="description" content="LS AgileWorks — Technical Project Management & Delivery. Supporting global engineering teams to deliver complex initiatives with predictability and transparency." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://lsagileworks.com.br/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="LS AgileWorks | Technical Project Management & Delivery" />
-  <meta property="og:description" content="Supporting global engineering teams to deliver complex initiatives with predictability and transparency." />
+  <meta property="og:title" content="LS AgileWorks | Technical Project Management" />
+  <meta property="og:description" content="Supporting engineering teams and leadership to deliver complex initiatives with predictability and transparency." />
   <meta property="og:url" content="https://lsagileworks.com.br/" />
   <meta property="og:image" content="https://lsagileworks.com.br/assets/og-image.jpg" />
 
@@ -21,132 +21,199 @@
 </head>
 
 <body>
-<header class="header">
-  <div class="container header__inner">
-    <div class="brand">LS AgileWorks</div>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <nav class="nav">
-      <button class="nav__toggle" aria-controls="navMenu" aria-expanded="false">☰</button>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="LS AgileWorks Home">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__text">LS AgileWorks</span>
+      </a>
 
-      <div id="navMenu" class="nav__menu">
-        <a href="#impact" data-i18n="nav.impact">Impact</a>
-        <a href="#tools" data-i18n="nav.tools">Tools</a>
-        <a href="#contact" class="nav__cta" data-i18n="nav.contact">Contact</a>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navMenu">
+          <span class="sr-only">Open menu</span>
+          <span class="nav__burger" aria-hidden="true"></span>
+        </button>
 
-        <div class="langSwitch">
-          <button class="langBtn" data-lang="en">EN</button>
-          <button class="langBtn" data-lang="pt">PT</button>
+        <div id="navMenu" class="nav__menu">
+          <a href="#impact" data-i18n="nav.impact">Impact</a>
+          <a href="#tools" data-i18n="nav.tools">Tools</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+
+          <div class="controls">
+            <div class="langSwitch" role="group" aria-label="Language selector">
+              <button class="langBtn" type="button" data-lang="en" aria-pressed="false">EN</button>
+              <button class="langBtn" type="button" data-lang="pt" aria-pressed="false">PT</button>
+            </div>
+
+            <button class="themeBtn" type="button" aria-label="Toggle theme">
+              <span class="themeIcon" aria-hidden="true"></span>
+            </button>
+          </div>
         </div>
-
-        <button class="themeBtn" aria-label="Toggle theme">☾</button>
-      </div>
-    </nav>
-  </div>
-</header>
-
-<main>
-<section class="hero">
-  <div class="container hero__inner">
-
-    <div class="hero__content">
-      <p class="pill">Remote contractor • Global teams</p>
-
-      <h1>
-        Technical Project Management<br />
-        <span class="muted">with delivery focus and leadership visibility</span>
-      </h1>
-
-      <p class="lead">
-        Supporting engineering teams and leadership to deliver complex initiatives with predictability and transparency.
-      </p>
-
-      <div class="actions">
-        <a href="#contact" class="btn primary" data-i18n="hero.ctaContact">Contact</a>
-        <a href="assets/Lucas_de_Sousa_Oliveira_CV.pdf" target="_blank" class="btn subtle" data-i18n="hero.ctaCv">Download CV</a>
-
-        <div class="linkRow">
-          <a class="link" href="https://www.linkedin.com/in/pmlsousa/" target="_blank">LinkedIn</a>
-          <span>•</span>
-          <a class="link" href="https://wa.me/+5531988276388" target="_blank">WhatsApp</a>
-        </div>
-      </div>
-
-      <div class="meta">
-        <div class="meta__item">
-          <span class="meta__label">Roles</span>
-          <span class="meta__value">Technical PM • Delivery Manager • Project Manager – Engineering</span>
-        </div>
-        <div class="meta__item">
-          <span class="meta__label">Focus</span>
-          <span class="meta__value">Scope • Risk • Dependencies • Predictability</span>
-        </div>
-      </div>
+      </nav>
     </div>
+  </header>
 
-    <div class="card hero__card">
-      <img src="assets/profile.webp" alt="Lucas Sousa" class="avatarImg" />
+  <main id="main">
+    <!-- HERO -->
+    <section id="top" class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Remote contractor • Global teams</p>
 
-      <h3>Lucas Sousa</h3>
-      <p class="muted">Belo Horizonte, Brazil</p>
+          <h1 data-i18n="hero.title">
+            Technical Project Management<br />
+            <span class="h1__muted">with delivery focus and leadership visibility</span>
+          </h1>
 
-      <div class="kv">
-        <span>Email</span>
-        <span>lucas02s.oliveira@gmail.com</span>
+          <p class="lead" data-i18n="hero.lead">
+            Supporting engineering teams and leadership to deliver complex initiatives with predictability and transparency.
+          </p>
+
+          <div class="actions">
+            <a class="btn btn--primary" href="#contact" data-i18n="hero.ctaContact">Contact</a>
+            <a class="btn btn--ghost" href="assets/Lucas_de_Sousa_Oliveira_CV.pdf" target="_blank" rel="noopener" data-i18n="hero.ctaCv">
+              Download CV
+            </a>
+
+            <div class="linkRow" aria-label="External links">
+              <a class="link" href="https://www.linkedin.com/in/pmlsousa/" target="_blank" rel="noopener" data-i18n="hero.linkLinkedin">LinkedIn</a>
+              <span class="sep" aria-hidden="true">•</span>
+              <a class="link" href="https://wa.me/+5531988276388" target="_blank" rel="noopener" data-i18n="hero.linkWhatsapp">WhatsApp</a>
+            </div>
+          </div>
+
+          <div class="meta">
+            <div class="meta__item">
+              <div class="meta__label" data-i18n="meta.rolesK">Roles</div>
+              <div class="meta__value">Technical PM • Delivery Manager • Project Manager – Engineering</div>
+            </div>
+            <div class="meta__item">
+              <div class="meta__label" data-i18n="meta.focusK">Focus</div>
+              <div class="meta__value">Scope • Risk • Dependencies • Predictability</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROFILE CARD -->
+        <aside class="profileCard" aria-label="Profile card">
+          <div class="profileTop">
+            <img class="profileImg" src="assets/images/profile.webp" alt="Lucas Sousa" />
+            <div>
+              <div class="profileName">Lucas Sousa</div>
+              <div class="profileLoc">Belo Horizonte, Brazil</div>
+            </div>
+          </div>
+
+          <div class="profileBody">
+            <div class="kv">
+              <span class="kv__k">Email</span>
+              <span class="kv__v">
+                <button class="linkBtn" type="button" data-copy="lucas02s.oliveira@gmail.com">
+                  lucas02s.oliveira@gmail.com
+                </button>
+              </span>
+            </div>
+
+            <div class="kv">
+              <span class="kv__k">WhatsApp</span>
+              <span class="kv__v">
+                <a class="link" href="https://wa.me/+5531988276388" target="_blank" rel="noopener">+55 31 98827-6388</a>
+              </span>
+            </div>
+
+            <div class="kv">
+              <span class="kv__k" data-i18n="profile.availK">Availability</span>
+              <span class="kv__v" data-i18n="profile.availV">Remote contractor (PJ)</span>
+            </div>
+          </div>
+
+          <div class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+        </aside>
       </div>
-      <div class="kv">
-        <span>Availability</span>
-        <span>Remote contractor (PJ)</span>
+    </section>
+
+    <!-- IMPACT -->
+    <section id="impact" class="section">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 data-i18n="impact.title">Selected impact</h2>
+          <p class="sub" data-i18n="impact.sub">A few delivery outcomes that summarize how I operate.</p>
+        </div>
+
+        <ul class="bullets">
+          <li data-i18n="impact.b1">Led delivery execution for remote engineering teams.</li>
+          <li data-i18n="impact.b2">Coordinated cross-team planning aligned with business objectives.</li>
+          <li data-i18n="impact.b3">Improved delivery predictability using metrics and execution tracking.</li>
+          <li data-i18n="impact.b4">Supported leadership with risk visibility and delivery insights.</li>
+        </ul>
       </div>
-    </div>
+    </section>
 
-  </div>
-</section>
+    <!-- TOOLS -->
+    <section id="tools" class="section">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 data-i18n="tools.title">Tools & Metrics</h2>
+          <p class="sub" data-i18n="tools.sub">Practical, hands-on experience — measured in execution, not buzzwords.</p>
+        </div>
 
-<section id="impact" class="section">
-  <div class="container">
-    <h2 data-i18n="impact.title">Selected impact</h2>
+        <div class="skillGrid">
+          <div class="skill">
+            <div class="skill__top">
+              <span class="skill__name">Jira</span>
+              <span class="skill__lvl" data-i18n="lvl.advanced">Advanced</span>
+            </div>
+            <div class="bar" aria-hidden="true"><span class="fill" style="width: 90%"></span></div>
+          </div>
 
-    <ul class="bullets">
-      <li>Led delivery execution for remote engineering teams.</li>
-      <li>Coordinated cross-team planning aligned with business objectives.</li>
-      <li>Improved delivery predictability using metrics and execution tracking.</li>
-      <li>Supported leadership with risk visibility and delivery insights.</li>
-    </ul>
-  </div>
-</section>
+          <div class="skill">
+            <div class="skill__top">
+              <span class="skill__name">Azure DevOps</span>
+              <span class="skill__lvl" data-i18n="lvl.proficient">Proficient</span>
+            </div>
+            <div class="bar" aria-hidden="true"><span class="fill" style="width: 78%"></span></div>
+          </div>
 
-<section id="tools" class="section">
-  <div class="container">
-    <h2 data-i18n="tools.title">Tools & Metrics</h2>
+          <div class="skill">
+            <div class="skill__top">
+              <span class="skill__name" data-i18n="tools.metrics">Delivery metrics (LT, CT, Predictability, CFD)</span>
+              <span class="skill__lvl" data-i18n="lvl.advanced">Advanced</span>
+            </div>
+            <div class="bar" aria-hidden="true"><span class="fill" style="width: 85%"></span></div>
+          </div>
 
-    <div class="skillGrid">
-      <div class="skill"><span>Jira</span><div class="bar"><span style="width:90%"></span></div></div>
-      <div class="skill"><span>Azure DevOps</span><div class="bar"><span style="width:75%"></span></div></div>
-      <div class="skill"><span>Delivery Metrics</span><div class="bar"><span style="width:85%"></span></div></div>
-      <div class="skill"><span>Workflow Automation</span><div class="bar"><span style="width:78%"></span></div></div>
-    </div>
-  </div>
-</section>
+          <div class="skill">
+            <div class="skill__top">
+              <span class="skill__name" data-i18n="tools.automation">Workflow automation</span>
+              <span class="skill__lvl" data-i18n="lvl.proficient">Proficient</span>
+            </div>
+            <div class="bar" aria-hidden="true"><span class="fill" style="width: 76%"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section id="contact" class="section">
-  <div class="container">
-    <h2 data-i18n="contact.title">Contact</h2>
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="contactGrid">
+          <div>
+            <h2 data-i18n="contact.title">Contact</h2>
+            <p class="sub" data-i18n="contact.sub">
+              Open to remote contractor opportunities as a Technical Project Manager.
+            </p>
 
-    <p>
-      Open to remote contractor opportunities as a <strong>Technical Project Manager</strong>.
-    </p>
+            <div class="contactActions">
+              <a class="btn btn--primary" href="mailto:lucas02s.oliveira@gmail.com?subject=Opportunity%20-%20LS%20AgileWorks" data-i18n="contact.email">
+                Email me
+              </a>
+              <a class="btn btn--ghost" href="https://wa.me/+5531988276388" target="_blank" rel="noopener" data-i18n="contact.whatsapp">
+                WhatsApp
+              </a>
+            </div>
+          </div>
 
-    <a class="btn primary" href="mailto:lucas02s.oliveira@gmail.com">Email me</a>
-  </div>
-</section>
-</main>
-
-<footer class="footer">
-  <div class="container">
-    © <span id="year"></span> LS AgileWorks
-  </div>
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>
+          <aside class="cont
