@@ -557,3 +557,4 @@ h1{
   padding: 16px;
   box-shadow: var(--shadow);
 }
+.footer__links a{ color: var(--muted); }
