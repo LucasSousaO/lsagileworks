@@ -528,7 +528,6 @@ h1{
   [data-theme="dark"] .nav__menu{
     background: rgba(11,11,11,.92);
   }
-  .nav__menu.isOpen{ display:flex; }
   .controls{ width:100%; justify-content: space-between; }
   .hero{
   padding: 20px 0 18px;
@@ -566,6 +565,5 @@ h1{
 }
 .footer__links a{ color: var(--muted); }
 /* exemplo */
-.nav__menu { display: flex; }
 .isCopied { opacity: .8; }
 .isCopyFail { opacity: .8; }
