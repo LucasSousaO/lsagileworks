@@ -559,3 +559,11 @@ h1{
   box-shadow: var(--shadow);
 }
 .footer__links a{ color: var(--muted); }
+/* exemplo */
+.nav__menu { display: flex; }
+@media (max-width: 900px){
+  .nav__menu { display:none; }
+  .nav__menu.isOpen { display:block; }
+}
+.isCopied { opacity: .8; }
+.isCopyFail { opacity: .8; }
