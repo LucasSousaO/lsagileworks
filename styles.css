@@ -478,3 +478,126 @@ h1{
     background: rgba(255,255,255,.06);
   }
 }
+
+/* ===== CLEAN MODE OVERRIDES ===== */
+
+/* base: deixa tudo mais leve */
+:root{
+  --shadow: 0 8px 20px rgba(0,0,0,.18); /* mais sutil */
+  --radius: 16px;
+}
+
+.section--alt{
+  background: transparent;         /* tira a faixa */
+  border-top: none;
+  border-bottom: none;
+}
+
+/* cards/panels mais clean */
+.panel, .card, .meta__item{
+  background: rgba(255,255,255,.035);
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: none;                /* remove sombra de “card clicável” */
+}
+
+[data-theme="light"] .panel,
+[data-theme="light"] .card,
+[data-theme="light"] .meta__item{
+  background: rgba(16,22,39,.02);
+  border: 1px solid rgba(16,22,39,.10);
+}
+
+/* reduz “cara de botão” */
+.btn{
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.06);
+  box-shadow: none;
+}
+
+.btn:hover{
+  background: rgba(255,255,255,.08);
+}
+
+/* CTA primário mais discreto (ainda destaca) */
+.btn.primary{
+  background: rgba(122,162,255,.14);
+  border-color: rgba(122,162,255,.28);
+}
+
+/* secundário minimalista */
+.btn.subtle{
+  background: transparent;
+  border-color: rgba(255,255,255,.12);
+  color: var(--muted);
+}
+.btn.subtle:hover{
+  color: var(--text);
+  background: rgba(255,255,255,.05);
+}
+
+/* Links “de verdade”, sem cara de botão */
+.linkRow{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.linkRow .sep{ opacity: .55; }
+
+a.link{
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(255,255,255,.25);
+}
+a.link:hover{
+  color: var(--text);
+  text-decoration-color: rgba(255,255,255,.45);
+}
+
+/* tags menos “pílula” */
+.tag{
+  border: none;
+  background: rgba(255,255,255,.05);
+  color: var(--muted);
+}
+
+/* nav mais clean (sem caixinhas) */
+.nav__menu a{
+  background: transparent !important;
+  border: none !important;
+  color: var(--muted);
+}
+.nav__menu a:hover{
+  background: transparent !important;
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.nav__cta{
+  border: none !important;
+  background: transparent !important;
+  color: var(--text) !important;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* remove “pílula” do topo se quiser mais clean ainda */
+.pill{
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: var(--muted);
+}
+
+/* reduz a impressão de “tudo clicável” dentro de cards */
+.linkBtn{
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: var(--muted);
+}
+.linkBtn:hover{ color: var(--text); }
