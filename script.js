@@ -235,7 +235,7 @@
 
   function detectBrowserLang() {
     const lang = (navigator.language || "en").toLowerCase();
-    return lang.startsWith("pt") ? "pt" : "en";
+    return lang.startsWith("es") ? "pt" : "en";
   }
 
   function applyLang(lang) {
