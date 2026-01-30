@@ -1,107 +1,48 @@
-(function () {
-  const root = document.documentElement;
-  const yearEl = document.getElementById("year");
-  const navToggle = document.querySelector(".nav__toggle");
-  const navMenu = document.getElementById("navMenu");
-  const themeBtn = document.querySelector(".themeBtn");
-  const toast = document.querySelector(".toast");
+const root = document.documentElement;
+const year = document.getElementById("year");
+year.textContent = new Date().getFullYear();
 
-  // Year
-  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+// THEME — default LIGHT
+const storedTheme = localStorage.getItem("theme");
+root.setAttribute("data-theme", storedTheme || "light");
 
-  // Theme
-  const storedTheme = localStorage.getItem("theme");
-  if (storedTheme === "light" || storedTheme === "dark") {
-    root.setAttribute("data-theme", storedTheme);
+document.querySelector(".themeBtn").onclick = () => {
+  const next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
+  root.setAttribute("data-theme", next);
+  localStorage.setItem("theme", next);
+};
+
+// LANGUAGE
+const dict = {
+  en:{
+    "nav.impact":"Impact",
+    "nav.tools":"Tools",
+    "nav.contact":"Contact",
+    "hero.ctaContact":"Contact",
+    "hero.ctaCv":"Download CV",
+    "impact.title":"Selected impact",
+    "tools.title":"Tools & Metrics",
+    "contact.title":"Contact"
+  },
+  pt:{
+    "nav.impact":"Impacto",
+    "nav.tools":"Ferramentas",
+    "nav.contact":"Contato",
+    "hero.ctaContact":"Contato",
+    "hero.ctaCv":"Baixar CV",
+    "impact.title":"Impactos",
+    "tools.title":"Ferramentas & Métricas",
+    "contact.title":"Contato"
   }
+};
 
-  function setTheme(next) {
-    root.setAttribute("data-theme", next);
-    localStorage.setItem("theme", next);
-    const icon = document.querySelector(".themeBtn__icon");
-    if (icon) icon.textContent = next === "light" ? "☀" : "☾";
-  }
+const lang = localStorage.getItem("lang") || (navigator.language.startsWith("pt") ? "pt" : "en");
+localStorage.setItem("lang", lang);
 
-  if (themeBtn) {
-    // set initial icon
-    const current = root.getAttribute("data-theme") || "dark";
-    const icon = document.querySelector(".themeBtn__icon");
-    if (icon) icon.textContent = current === "light" ? "☀" : "☾";
+document.querySelectorAll("[data-i18n]").forEach(el=>{
+  el.textContent = dict[lang][el.dataset.i18n];
+});
 
-    themeBtn.addEventListener("click", () => {
-      const currentTheme = root.getAttribute("data-theme") || "dark";
-      setTheme(currentTheme === "light" ? "dark" : "light");
-    });
-  }
-
-  // Mobile menu
-  function closeMenu() {
-    if (!navMenu || !navToggle) return;
-    navMenu.classList.remove("isOpen");
-    navToggle.setAttribute("aria-expanded", "false");
-  }
-
-  if (navToggle && navMenu) {
-    navToggle.addEventListener("click", () => {
-      const isOpen = navMenu.classList.toggle("isOpen");
-      navToggle.setAttribute("aria-expanded", String(isOpen));
-    });
-
-    // Close menu when clicking a link
-    navMenu.addEventListener("click", (e) => {
-      const target = e.target;
-      if (target && target.tagName === "A") closeMenu();
-    });
-
-    // Close menu on Escape
-    window.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeMenu();
-    });
-
-    // Close menu on outside click
-    document.addEventListener("click", (e) => {
-      const t = e.target;
-      if (!navMenu.classList.contains("isOpen")) return;
-      if (t === navToggle || navToggle.contains(t)) return;
-      if (navMenu.contains(t)) return;
-      closeMenu();
-    });
-  }
-
-  // Copy to clipboard (email)
-  async function copyText(text) {
-    try {
-      await navigator.clipboard.writeText(text);
-      showToast(`Copied: ${text}`);
-    } catch (err) {
-      // Fallback
-      const ta = document.createElement("textarea");
-      ta.value = text;
-      ta.style.position = "fixed";
-      ta.style.left = "-9999px";
-      document.body.appendChild(ta);
-      ta.focus();
-      ta.select();
-      const ok = document.execCommand("copy");
-      document.body.removeChild(ta);
-      showToast(ok ? `Copied: ${text}` : "Copy failed");
-    }
-  }
-
-  let toastTimer = null;
-  function showToast(msg) {
-    if (!toast) return;
-    toast.textContent = msg;
-    if (toastTimer) clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => {
-      toast.textContent = "";
-    }, 2400);
-  }
-
-  document.querySelectorAll("[data-copy]").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const text = btn.getAttribute("data-copy");
-      if (text) copyText(text);
-    });
-  });
-})();
+document.querySelectorAll(".langBtn").forEach(btn=>{
+  btn.onclick = ()=>location.reload(localStorage.setItem("lang", btn.dataset.lang));
+});
