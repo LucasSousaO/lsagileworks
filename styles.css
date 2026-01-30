@@ -116,7 +116,7 @@ a:hover{ text-decoration: underline; text-underline-offset: 4px; }
 }
 
 .nav__toggle{
-  display:none;
+  display:flex;
   border: 1px solid var(--border);
   background: transparent;
   color: var(--text);
