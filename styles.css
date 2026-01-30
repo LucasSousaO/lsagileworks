@@ -243,7 +243,7 @@ h1{
 }
 
 .actions{
-  display:ruby-text;
+  display:inline-flex;
   flex-wrap:wrap;
   align-items:center;
   gap: 10px 10px;
@@ -265,10 +265,12 @@ h1{
 }
 .btn:hover{
   background: rgba(0,0,0,.03);
+  color:var(--accent);
   text-decoration:none;
 }
 [data-theme="dark"] .btn:hover{
   background: rgba(255,255,255,.06);
+  color: var(--accent);
 }
 
 .btn--primary{
@@ -284,8 +286,7 @@ h1{
 }
 
 .linkRow{
-  width: 100%;
-  display:flex;
+  display:inline-flex;
   align-items:center;
   gap: 10px;
   color: var(--muted);
