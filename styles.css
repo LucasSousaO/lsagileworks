@@ -533,6 +533,9 @@ h1{
   .hero{
   padding: 20px 0 18px;
 }
+.actions{
+  display:inline;
+}
 }
 .toast{
   margin-top: 12px;
