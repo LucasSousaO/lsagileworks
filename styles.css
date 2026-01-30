@@ -41,7 +41,6 @@ body{
 
 /* remove purple/visited styling */
 a, a:visited{
-  color: inherit;
   text-decoration: none;
 }
 a:hover{ text-decoration: underline; text-underline-offset: 4px; }
@@ -195,7 +194,7 @@ a:hover{ text-decoration: underline; text-underline-offset: 4px; }
 .themeBtn{
   width: 38px;
   height: 34px;
-  display:flex;
+  display:none;
   align-items:center;
   justify-content:center;
   border: 1px solid var(--border);
@@ -244,7 +243,7 @@ h1{
 }
 
 .actions{
-  display:flex;
+  display:ruby-text;
   flex-wrap:wrap;
   align-items:center;
   gap: 10px 10px;
@@ -340,8 +339,9 @@ h1{
   margin-bottom: 12px;
 }
 .profileImg{
-  width: 56px;
-  height: 56px;
+  object-position: top;
+  width: 200px;
+  height: 200px;
   border-radius: 16px;
   object-fit: cover;
   border: 1px solid var(--border);
@@ -349,6 +349,10 @@ h1{
 .profileName{
   font-weight: 900;
   letter-spacing: -.2px;
+}
+.profileDesc{
+  color: var(--muted);
+  font-size: 14px;
 }
 .profileLoc{
   color: var(--muted);
