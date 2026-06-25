@@ -204,7 +204,7 @@
       "nav.tools": "Ferramentas",
       "nav.contact": "Contato",
 
-      "hero.eyebrow": "Contrato PJ remoto • Times globais",
+      "hero.eyebrow": "Remoto • Times globais",
       "hero.title": "Gestão de Projetos",
       "hero.lead": "Apoio times de engenharia a entregar iniciativas complexas com previsibilidade e transparência.",
       "hero.ctaContact": "Contato",
