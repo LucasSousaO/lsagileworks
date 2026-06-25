@@ -340,7 +340,7 @@ h1{
   margin-bottom: 12px;
 }
 .profileImg{
-  object-position: top;
+  object-position: center;
   width: 200px;
   height: 200px;
   border-radius: 16px;
