@@ -3,256 +3,197 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>LS AgileWorks | Lucas Sousa | Technical Project Manager</title>
-  <meta name="description" content="LS AgileWorks:Technical Project Management & Delivery. Supporting global engineering teams to deliver complex initiatives with predictability and transparency." />
+  <title>Lucas de Sousa Oliveira | Senior IT Project Manager &amp; Scrum Master</title>
+  <meta name="description" content="Online CV of Lucas de Sousa Oliveira, Senior IT Project Manager and Scrum Master (SAFe) with 6+ years leading distributed software teams for US and international clients." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://lsagileworks.com.br/" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="LS AgileWorks | Technical Project Management" />
-  <meta property="og:description" content="Supporting engineering teams and leadership to deliver complex initiatives with predictability and transparency." />
-  <meta property="og:url" content="https://lsagileworks.com.br/" />
-  <meta property="og:image" content="https://lsagileworks.com.br/assets/lsaw.webp" />
-
+  <link rel="canonical" href="https://lucas.lsagileworks.com.br/" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Lucas de Sousa Oliveira | Senior IT Project Manager &amp; Scrum Master" />
+  <meta property="og:description" content="6+ years leading distributed software teams for US and international clients." />
+  <meta property="og:url" content="https://lucas.lsagileworks.com.br/" />
+  <meta property="og:image" content="https://lucas.lsagileworks.com.br/assets/profile.webp" />
   <link rel="icon" href="assets/logo.webp" />
-  <link rel="stylesheet" href="styles.css" />
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "v9lyej2j7r");
-</script>
+  </script>
+  <style>
+    :root {
+      --bg: #f6f7f9; --card: #ffffff; --text: #1d2330; --muted: #5b6475;
+      --line: #e3e6ec; --accent: #2f6f7e; --accent-soft: #e6f1f3;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #12161d; --card: #1a2029; --text: #e7eaf0; --muted: #a2abba;
+        --line: #2b3340; --accent: #6fb6c4; --accent-soft: #1f3138;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      font-size: 16px; line-height: 1.6;
+    }
+    a { color: var(--accent); }
+    .page { max-width: 860px; margin: 40px auto; padding: 0 20px; }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 40px 44px; }
+
+    header.top { display: flex; gap: 28px; align-items: center; }
+    .photo { width: 112px; height: 112px; border-radius: 50%; object-fit: cover; flex: none; border: 3px solid var(--accent-soft); }
+    h1 { font-size: 30px; line-height: 1.2; margin: 0; letter-spacing: -0.01em; }
+    .title { font-size: 18px; font-weight: 600; color: var(--accent); margin: 4px 0 6px; }
+    .meta { color: var(--muted); font-size: 14.5px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .btn {
+      display: inline-block; padding: 9px 16px; border-radius: 8px; border: 1px solid var(--line);
+      color: var(--text); text-decoration: none; font-size: 14.5px; font-weight: 600; background: var(--card);
+    }
+    .btn:hover { border-color: var(--accent); }
+    .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+    section { margin-top: 34px; }
+    h2 {
+      font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+      margin: 0 0 14px; padding-bottom: 8px; border-bottom: 1px solid var(--line);
+    }
+    p { margin: 0 0 10px; }
+
+    .job { margin-bottom: 22px; }
+    .job__head { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .job__role { font-weight: 700; }
+    .job__org { color: var(--muted); }
+    .job__dates { color: var(--muted); font-size: 14.5px; white-space: nowrap; }
+    ul { margin: 8px 0 0; padding-left: 20px; }
+    li { margin-bottom: 6px; }
+
+    .highlights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .stat { background: var(--accent-soft); border-radius: 10px; padding: 14px 16px; }
+    .stat__num { font-size: 22px; font-weight: 700; color: var(--accent); line-height: 1.2; }
+    .stat__txt { font-size: 14px; color: var(--muted); }
+
+    .skills dt { font-weight: 700; margin-top: 10px; }
+    .skills dd { margin: 2px 0 0; color: var(--text); }
+
+    .two { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+    footer { text-align: center; color: var(--muted); font-size: 13.5px; margin: 24px 0 40px; }
+
+    @media (max-width: 640px) {
+      .card { padding: 26px 20px; }
+      header.top { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .highlights, .two { grid-template-columns: 1fr; }
+      h1 { font-size: 26px; }
+    }
+    @media print {
+      body { background: #fff; color: #000; font-size: 12px; }
+      .page { margin: 0; max-width: none; }
+      .card { border: none; padding: 0; }
+      .actions, footer { display: none; }
+      a { color: #000; text-decoration: none; }
+    }
+  </style>
 </head>
-
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="header">
-    <div class="container header__inner">
-      <a class="brand" href="#top" aria-label="LS AgileWorks Home">
-        <span class="brand__mark" aria-hidden="true"></span>
-        <span class="brand__text">LS AgileWorks | Lucas Sousa | Project Manager</span>
-      </a>
-
-      <nav class="nav" aria-label="Primary">
-        <div id="navMenu" class="nav__menu">
-          <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navMenu">
-          <span class="nav__toggleLines" aria-hidden="true"></span>
-          <span class="sr-only">Open menu</span>
-        </button>
-          <a href="#impact" data-i18n="nav.impact">Impact</a>
-          <a href="#tools" data-i18n="nav.tools">Tools</a>
-          <a href="#contact" data-i18n="nav.contact">Contact</a>
-
-          <div class="controls">
-            <div class="langSwitch" role="group" aria-label="Language selector">
-              <button class="langBtn" type="button" data-lang="en" aria-pressed="false">EN</button>
-              <button class="langBtn" type="button" data-lang="pt" aria-pressed="false">PT</button>
-            </div>
-
-            <button class="themeBtn" type="button" aria-label="Toggle theme">
-              <span class="themeIcon" aria-hidden="true"></span>
-            </button>
-          </div>
+  <main class="page">
+    <article class="card">
+      <header class="top">
+        <img class="photo" src="assets/profile.webp" alt="Lucas de Sousa Oliveira" />
+        <div>
+          <h1>Lucas de Sousa Oliveira</h1>
+          <div class="title">Senior IT Project Manager | Scrum Master (SAFe)</div>
+          <div class="meta">Belo Horizonte, Brazil · Remote · Available for US time zones</div>
         </div>
-      </nav>
-    </div>
-  </header>
+      </header>
 
-  <main id="main">
-    <!-- HERO -->
-    <section id="top" class="hero">
-      <div class="container hero__inner">
-        <div class="hero__content">
-          <p class="eyebrow" data-i18n="hero.eyebrow">Remote contractor • Global teams</p>
-
-          <h1 data-i18n="hero.title">
-            Project Manager<br />
-            <span class="h1__muted">improving team delivery</span>
-          </h1>
-
-          <p class="lead" data-i18n="hero.lead">
-            Supporting engineering teams to deliver complex initiatives with predictability and transparency.
-          </p>
-
-          <div class="actions">
-            <a class="btn btn--primary" href="#contact" data-i18n="hero.ctaContact">Contact</a>
-            <a class="btn btn--ghost" href="assets/Lucas_de_Sousa_Oliveira_CV.pdf" target="_blank" rel="noopener" data-i18n="hero.ctaCv">
-              Download CV
-            </a>
-
-          </div>
-
-          <div class="meta">
-            <div class="meta__item">
-              <div class="meta__label" data-i18n="meta.rolesK">Roles</div>
-              <div class="meta__value">Technical PM • Delivery Manager • Project Manager • Scrum Master</div>
-            </div>
-            <div class="meta__item">
-              <div class="meta__label" data-i18n="meta.focusK">Focus</div>
-              <div class="meta__value">Predictability • Risk • Dependencies • Scope</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- PROFILE CARD -->
-        <aside class="profileCard" aria-label="Profile card">
-          <div class="profileTop">
-            <img class="profileImg" src="assets/profile.webp" alt="Lucas Sousa" />
-            <div>
-              <div class="profileName">Lucas Sousa</div>
-              <div class="profileDesc">Technical Project Manager • Delivery over 5 years</div>
-              <div class="profileDesc">PSMI, SSM</div>
-              <div class="profileLoc">Remote, Brazil</div>
-            </div>
-          </div>
-
-          <div class="profileBody">
-            <div class="kv">
-              <span class="kv__k">Email</span>
-              <span class="kv__v" >
-                <button class="linkBtn" type="button" data-copy="lucas02s.oliveira@gmail.com">
-                  lucas02s.oliveira@gmail.com
-                </button>
-              </span>
-            </div>
-
-            <div class="kv">
-              <span class="kv__k">WhatsApp</span>
-              <span class="kv__v">
-                <a class="link" href="https://wa.me/+5531988276388" target="_blank" rel="noopener">+55 31 98827-6388</a>
-              </span>
-            </div>
-
-            <div class="kv">
-              <span class="kv__k" data-i18n="profile.availK">Availability</span>
-              <span class="kv__v" data-i18n="profile.availV">Remote contractor (PJ)</span>
-            </div>
-            <div class="kv"><span class="kv__k">Domains</span><span class="kv__v">E-commerce • Integrations • IT projects</span>
-            </div>            
-          </div>
-        </aside>
+      <div class="actions">
+        <a class="btn primary" href="assets/Lucas_de_Sousa_Oliveira_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+        <a class="btn" href="mailto:lucas02s.oliveira@gmail.com">lucas02s.oliveira@gmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/pmlsousa/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://wa.me/5531988276388" target="_blank" rel="noopener">WhatsApp</a>
       </div>
-    </section>
 
-    <!-- IMPACT -->
-    <section id="impact" class="section">
-      <div class="container">
-        <div class="sectionHead">
-         <h2>Helping Engineering Teams Deliver with Confidence.</h2>  
-            <p>I partner with organizations to improve delivery predictability, coordinate complex software initiatives, and enable better decisions through project management, flow metrics, and process optimization.</p>
+      <section>
+        <h2>Summary</h2>
+        <p>IT Project Manager and Scrum Master with 6+ years of experience leading distributed software teams for US and international clients. I manage several projects at the same time, coordinate dependencies between teams and use delivery metrics to improve planning. Recent work includes coordinating Salesforce integration projects and building internal automations.</p>
+      </section>
+
+      <section>
+        <h2>Results</h2>
+        <div class="highlights">
+          <div class="stat"><div class="stat__num">50% → &lt;20%</div><div class="stat__txt">sprint churn</div></div>
+          <div class="stat"><div class="stat__num">&lt;50% → &gt;70%</div><div class="stat__txt">delivery predictability</div></div>
+          <div class="stat"><div class="stat__num">−50%</div><div class="stat__txt">ticket waiting time with a chatbot integration</div></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+
+        <div class="job">
+          <div class="job__head">
+            <div><span class="job__role">Scrum Master</span> <span class="job__org">· Avenue Code (international clients)</span></div>
+            <div class="job__dates">Sep 2020 – Present</div>
+          </div>
+          <ul>
+            <li>Led up to four cross-functional Scrum teams at the same time (frontend, backend, QA and DevOps) working across time zones.</li>
+            <li>Managed six projects end to end as Project Manager, covering planning, risks, dependencies and go-live.</li>
+            <li>Coordinated the web, integration and Salesforce teams on projects that send leads and opportunities from a SaaS platform into Salesforce for car dealerships. The integrations were delivered on schedule.</li>
+            <li>Supported Salesforce testing through the user interface and worked with the Salesforce team to investigate Apex errors.</li>
+            <li>Used Azure DevOps to coordinate dependencies with external teams that did not work in Jira.</li>
+            <li>Reduced sprint churn from 50% to under 20% and improved predictability from under 50% to over 70% by agreeing on a single sprint goal with leadership and tightening sprint planning.</li>
+            <li>Reduced lead time by 10% by simplifying the workflow and automating Jira steps.</li>
+            <li>Built a chatbot integration that notifies owners of blocked tickets, cutting ticket waiting time by more than 50%.</li>
+            <li>Built an AI-assisted tool that checks documents before the operations team uploads them, saving about four hours per week.</li>
+            <li>Implemented Jira automations and validations that save about three hours per week, plus an alert that reminds Product Owners when stories need refinement.</li>
+            <li>Built delivery dashboards in Jira, Power BI and Grafana, and automated recurring reports for the sales and customer service teams.</li>
+            <li>Introduced SAFe practices such as PI Planning and moved teams from Scrum to Kanban when it suited the work better.</li>
+            <li>Took part in hiring, onboarding and performance follow-up with HR and leadership.</li>
+          </ul>
         </div>
 
-        <ul class="bullets">
-          <li data-i18n="impact.b1">Led delivery execution for remote engineering teams, ensuring clarity, flow, and realistic commitments.</li>
-          <li data-i18n="impact.b2">Coordinated cross-team planning and dependencies, aligning execution with strategic business objectives.</li>
-          <li data-i18n="impact.b3">Improved delivery predictability through execution tracking and data-driven metrics (Lead Time, Cycle Time, Predictability, CFD).</li>
-          <li data-i18n="impact.b4">Supported leadership with clear delivery narratives, highlighting risks, trade-offs, and execution insights to enable informed decisions.</li>
-        </ul>
+        <div class="job">
+          <div class="job__head">
+            <div><span class="job__role">Programming Instructor and Engineering Intern</span></div>
+            <div class="job__dates">Before 2020</div>
+          </div>
+          <ul>
+            <li>Taught programming fundamentals in C++ and Python.</li>
+            <li>Completed internships during the Electrical Engineering degree.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Skills and tools</h2>
+        <dl class="skills">
+          <dt>Delivery</dt>
+          <dd>Scrum, Kanban, SAFe 6.0, PI Planning, risk and dependency management, release and go-live planning, stakeholder communication</dd>
+          <dt>Metrics</dt>
+          <dd>Lead time, cycle time, predictability, cumulative flow, sprint churn</dd>
+          <dt>Tools</dt>
+          <dd>Jira, Jira Plans, Confluence, Atlassian Rovo, Azure DevOps, Microsoft 365, Microsoft 365 Copilot, Power Automate, Power BI, Grafana, Google Apps Script, ServiceNow, Salesforce</dd>
+        </dl>
+      </section>
+
+      <div class="two">
+        <section>
+          <h2>Education and certifications</h2>
+          <p>B.S. in Electrical Engineering · UNIBH, 2019</p>
+          <p>Professional Scrum Master I (PSM I) · 2022</p>
+          <p>SAFe 6.0 Agilist · 2024</p>
+        </section>
+        <section>
+          <h2>Languages</h2>
+          <p>English: fluent</p>
+          <p>Portuguese: native</p>
+        </section>
       </div>
-    </section>
+    </article>
 
-    <!-- TOOLS -->
-    <section id="tools" class="section">
-      <div class="container">
-        <div class="sectionHead">
-          <h2 data-i18n="tools.title">Tools & Metrics</h2>
-          <p class="sub" data-i18n="tools.sub">Practical, hands-on experience.</p>
-        </div>
-
-        <div class="skillGrid">
-          <div class="skill">
-            <div class="skill__top">
-              <span class="skill__name">Project Management</span>
-              <span class="skill__lvl" data-i18n="lvl.advanced">Advanced</span>
-            </div>
-            <div class="bar" aria-hidden="true"><span class="fill" style="width: 80%"></span></div>
-          </div>
-                    <div class="skill">
-            <div class="skill__top">
-              <span class="skill__name" >Delivery metrics (Flow, Quality, Productivity & Capacity)</span>
-              <span class="skill__lvl" data-i18n="lvl.advanced">Fluent</span>
-            </div>
-            <div class="bar" aria-hidden="true"><span class="fill" style="width: 95%"></span></div>
-          </div>
-                    <div class="skill">
-            <div class="skill__top">
-              <span class="skill__name">Delivery Planning & Execution</span>
-              <span class="skill__lvl" data-i18n="lvl.proficient">Advanced</span>
-            </div>
-            <div class="bar" aria-hidden="true"><span class="fill" style="width: 80%"></span></div>
-          </div>
-
-          <div class="skill">
-            <div class="skill__top">
-              <span class="skill__name">Workflow Automation</span>
-              <span class="skill__lvl" data-i18n="lvl.advanced">Advanced</span>
-            </div>
-            <div class="bar" aria-hidden="true"><span class="fill" style="width: 80%"></span></div>
-          </div>
-                    <div class="skill">
-            <div class="skill__top">
-              <span class="skill__name">Jira&Azure DevOps</span>
-              <span class="skill__lvl" data-i18n="lvl.advanced">Expert</span>
-            </div>
-            <div class="bar" aria-hidden="true"><span class="fill" style="width: 95%"></span></div>
-          </div>
-                    <div class="skill">
-            <div class="skill__top">
-              <span class="skill__name">People Management</span>
-              <span class="skill__lvl" data-i18n="lvl.proficient">Proficient</span>
-            </div>
-            <div class="bar" aria-hidden="true"><span class="fill" style="width: 70%"></span></div>
-          </div>
-                    <div class="skill">
-            <div class="skill__top">
-              <span class="skill__name">Risk & Dependency Management</span>
-              <span class="skill__lvl" data-i18n="lvl.proficient">Proficient</span>
-            </div>
-            <div class="bar" aria-hidden="true"><span class="fill" style="width: 70%"></span></div>
-          </div>
-                    <div class="skill">
-            <div class="skill__top">
-              <span class="skill__name">Team remote communication</span>
-              <span class="skill__lvl" data-i18n="lvl.proficient">Advanced</span>
-            </div>
-            <div class="bar" aria-hidden="true"><span class="fill" style="width: 80%"></span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="contact">
-<div class="contact">
-          <div class="panel">
-            <h3>Let’s talk</h3>
-            <p>
-              Whether you need a <strong>Project Manager</strong> or <strong>Technical PM</strong>to improve delivery predictability, coordinate cross-functional teams, or drive complex initiatives, I’d be happy to discuss how I can support your goals.
-            </p>
-
-            <div class="contact__row">
-              <a class="btn primary" data-copy="lucas02s.oliveira@gmail.com">
-                Email me
-              </a>
-              <button class="btn" type="button" data-copy="lucas02s.oliveira@gmail.com">Copy email</button>
-              <a class="btn ghost" href="https://www.linkedin.com/in/pmlsousa/" target="_blank" rel="noopener">LinkedIn</a>
-             <a class="btn" type="button" href="https://wa.me/+5531988276388" target="_blank" rel="noopener" data-i18n="hero.linkWhatsapp">WhatsApp</a>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-      <div class="container footer__inner">
-        <p>© <span id="year"></span> LS AgileWorks. All rights reserved.</p>
-        <p class="footer__links">
-          <a href="#top">Back to top</a>
-        </p>
-      </div>
-    </footer>
+    <footer>© <span id="year"></span> Lucas de Sousa Oliveira</footer>
   </main>
-  <script src="script.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
